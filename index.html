@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>House</title>
+
+
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@436d40c/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+   
+</head>
+
+
+
+<body>       
+    <a-scene renderer="colorManagement: true">
+
+        <!-- Forest environment link (comment out when unwanted) -->
+        <a-entity position="0 -.5 0"
+                environment="preset: forest;
+                groundColor: #445;
+                grid: cross;">
+        </a-entity>
+
+
+
+        <!-- Motion -->
+        <a-entity id="rig" movement-controls="fly: true; speed: 0.3">
+                <a-entity camera
+                    position="0 1.6 0"
+                    look-controls>
+                </a-entity>
+        </a-entity>
+
+        <a-camera position="0 2 10"></a-camera>
+
+        <a-assets>
+                <img id="wood" src="assets/wood.jpeg">
+                <img id="straw" src="assets/straw.jpeg">
+                <img id="brick" src="assets/brick.jpeg">
+                <img id="fire" src="assets/fire.jpg">
+                <img id="walk" src="assets/gravel.jpeg">
+
+
+                <a-asset-item id="pig" src="assets/pig/scene.gltf"></a-asset-item>
+                <a-asset-item id="wolf" src="assets/wolf/scene.gltf"></a-asset-item>
+                
+
+        </a-assets>
+        
+
+
+
+
+
+       
+                <!-- Your 3D Model 01 -->
+                <a-entity gltf-model="#pig" scale=".07 .07 .07"></a-entity>
+                <a-entity gltf-model="#wolf" scale=".0007 .0007 .0007" rotation="0 180 0" position="0 0 15"></a-entity>
+
+<a-entity rotation="0 0 0" posititon="0 0 0">
+
+
+<a-entity rotation="0 0 0">
+       <!-- walkway -->
+       <a-box     
+       position="0 -0.501 10" 
+       width="3" 
+       height="20" 
+       rotation="90 0 0" 
+       shadow
+       src="#walk">
+ <!-- Fireplace/ chimeny -->
+<a-entity>
+<!-- Chimeny -->
+<a-box   
+        scale="1 1 3"
+        position="0 -15 0" 
+        width="2" 
+        height="20"
+        rotation="90 0 0"
+        src="#brick">
+</a-box>
+<!-- Firebox -->
+<a-box   
+        scale="1 1 1"
+        position="0 -14.2 -1.5" 
+        width="1.5" 
+        height="1.5" 
+        color="red"
+        rotation="180 0 0"
+        src="#fire">
+        
+</a-box>
+</a-entity>
+</a-box>
+        <!-- house -->
+        <a-entity>
+                
+                
+            <!-- Back wall -->
+            <a-box
+                
+                position="0 2.5 -4.5d"
+                rotation="0 0 180"
+                width="9.9"
+                height="5"
+                src="#wood">
+        </a-box>
+            <!-- front wall -->
+        <a-entity>
+            <!-- top -->
+            <a-box
+                    position="0 4 4.5"
+                    rotation="0 0 0"
+                    width="8"
+                    height="2"
+                    color="white"
+                    src="#wood">
+                </a-box>
+            <!-- left -->
+            <a-box
+                position="-2.75 1.5 4.5"
+                rotation="0 0 0"
+                width="2.5"
+                height="3"
+                color="white"
+                src="#wood"> 
+            ></a-box>
+            <!-- right -->
+            <a-box
+                position="2.75 1.5 4.5"
+                rotation="0 0 0"
+                width="2.5"
+                height="3"
+                color="white"
+                src="#wood"> 
+                ></a-box>
+        </a-entity>
+        <!-- right wall -->
+        <a-entity position="-0.01 0 0" rotation="0 90 0">
+                <!-- top -->
+                <a-box
+                        position="0 3.98 4.5"
+                        rotation="0 0 0"
+                        width="9.98"
+                        height="2"
+                        color="white"
+                        src="#wood">
+                ></a-box>
+                <!-- left -->
+                <a-box
+                    position="-3.74d 1.5 4.5"
+                    rotation="0 0 0"
+                    width="2.5"
+                    height="3"
+                    color="white"
+                    src="#wood"> 
+                ></a-box>
+                <!-- right -->
+                <a-box
+                    position="3.74 1.5 4.5"
+                    rotation="0 0 0"
+                    width="2.5"
+                    height="3"
+                    color="white"
+                    src="#wood">
+                    ></a-box>
+                <!-- Bottom -->
+                    <a-box
+                            position="0 0 4.5"
+                            rotation="0 0 0"
+                            width="9.98"
+                            height="2"
+                            color="white"
+                            src="#wood">
+                            
+        </a-entity>
+            <!-- left wall -->
+            <a-entity position="-8.99a 0 0" rotation="0 90 0">
+                <!-- top -->
+                <a-box
+                        position="0 3.98 4.5"
+                        rotation="0 0 0"
+                        width="9.98"
+                        height="2"
+                        color="white"
+                        src="#wood"> 
+                ></a-box>
+                <!-- left -->
+                <a-box
+                    position="-3.74d 1.5 4.5"
+                    rotation="0 0 0"
+                    width="2.5"
+                    height="3"
+                    color="white"
+                    src="#wood"> 
+                ></a-box>
+                <!-- right -->
+                <a-box
+                        position="3.74 1.5 4.5"
+                        rotation="0 0 0"
+                        width="2.5"
+                        height="3"
+                        color="white"
+                        src="#wood"> 
+                </a-box>
+                <!-- Bottom -->
+                <a-box
+                        position="0 0 4.5"
+                        rotation="0 0 0"
+                        width="9.98"
+                        height="2"
+                        color="white"
+                        src="#wood"> 
+            </a-entity>
+                 <!--attic floor -->
+                 <a-box
+                position="0 4.5 0"
+                rotation="90 0 0"
+                width="9.5"
+                height="9.5"
+                src="#wood"> 
+                 ></a-box>
+                 
+            <!-- Door left -->
+            <a-box
+            scale="1 1 .1"
+            position="-2.24 1.5 3.34"
+            rotation="0 -45 0"
+            width="2"
+            height="3"
+            color="maroon"
+            src="#wood"> 
+            ></a-box>
+            <!-- door right -->
+            <a-box 
+            scale="1 1 .1"
+            position="2.15 1.5 3.15"
+            rotation="0 -125 0"
+            width="2"
+            height="3"
+            color="maroon"
+            src="#wood">
+            ></a-box>
+<!-- roof -->
+<a-entity>
+        <!--Left roof -->
+        <a-box
+                scale="1 1 .2"
+                position="-3 7 0"
+                rotation="45 90 0"
+                width="10"
+                height="8"
+                color="white"
+                src="#wood">  
+        ></a-box>
+        <!-- right roof -->
+        <a-box
+                scale="1 1 .2"
+                position="3 7 0"
+                rotation="-45 90 0"
+                width="10"
+                height="8"
+                color="white"
+                src="#wood">
+        ></a-box>
+        <!--front roof-->
+         <a-entity> 
+                <a-triangle material="src: #wood;" map="repeat: 10 10;"
+                Side="double"
+                color="white" 
+                vertex-c="-5 5 5"
+                vertex-b="0 10 5" 
+                vertex-a="5 5 5">
+                
+                </a-triangle>
+        </a-entity>
+       <!--back roof -->
+       <a-entity> 
+                <a-triangle material="src: #wood;" map="repeat: 10 10;"
+                Side="double" 
+                vertex-c="-5 5 -5"
+                vertex-b="0 10 -5" 
+                vertex-a="5 5 -5">
+                </a-triangle>
+      </a-entity> 
+        <!-- foundation -->
+        <a-box 
+                position="0 -.5 0" 
+                rotation="-90 0 0" 
+                width="10" 
+                height="10" 
+                color="brown"
+                src="#wood">  
+                shadow> 
+        </a-box>
+
+</a-entity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+               
+
+
+<a-entity rotation="0 -45 0" position="18 0 7.2">
+       <!-- walkway -->
+       <a-box  
+       position="0 -0.501 10" 
+       width="3" 
+       height="20" 
+       rotation="90 0 0" 
+       shadow
+       src="#walk">
+
+ <!-- Your 3D Model 01 -->
+ <a-entity gltf-model="#pig" scale=".07 .07 .07" rotation="-90 180 180" position="0 -9 -.7"></a-entity>
+
+
+ <!-- Fireplace/ chimeny -->
+<a-entity>
+<!-- Chimeny -->
+<a-box   
+        scale="1 1 3"
+        position="0 -15 0" 
+        width="2" 
+        height="20" 
+        
+        rotation="90 0 0"
+        src="#brick">
+
+</a-box>
+<!-- Firebox -->
+<a-box   
+        scale="1 1 1"
+        position="0 -14.1 -1.5" 
+        width="1.5" 
+        height="1.5" 
+        color="red"
+        rotation="180 0 0"
+        src="#fire">
+</a-box>
+</a-entity>
+</a-box>
+        <!-- house -->
+        <a-entity>
+                
+            <!-- Back wall -->
+            <a-box
+                
+                position="0 2.5 -4.5d"
+                rotation="0 0 180"
+                width="9.9"
+                height="5"
+                color="white"
+                src="#brick"     
+            ></a-box>
+            <!-- front wall -->
+        <a-entity>
+            <!-- top -->
+            <a-box
+                    position="0 4 4.5"
+                    rotation="0 0 0"
+                    width="8"
+                    height="2"
+                    src="#brick"   
+            ></a-box>
+            <!-- left -->
+            <a-box
+                position="-2.75 1.5 4.5"
+                rotation="0 0 0"
+                width="2.5"
+                height="3"
+                src="#brick"   
+            ></a-box>
+            <!-- right -->
+            <a-box
+                position="2.75 1.5 4.5"
+                rotation="0 0 0"
+                width="2.5"
+                height="3"
+                src="#brick"   
+                ></a-box>
+        </a-entity>
+        <!-- right wall -->
+        <a-entity position="-0.01 0 0" rotation="0 90 0">
+                <!-- top -->
+                <a-box
+                        position="0 3.98 4.5"
+                        rotation="0 0 0"
+                        width="9.98"
+                        height="2"
+                        src="#brick"   
+                ></a-box>
+                <!-- left -->
+                <a-box
+                    position="-3.74d 1.5 4.5"
+                    rotation="0 0 0"
+                    width="2.5"
+                    height="3"
+                    src="#brick"   
+                ></a-box>
+                <!-- right -->
+                <a-box
+                    position="3.74 1.5 4.5"
+                    rotation="0 0 0"
+                    width="2.5"
+                    height="3"
+                    src="#brick"   
+                    ></a-box>
+                <!-- Bottom -->
+                    <a-box
+                            position="0 0 4.5"
+                            rotation="0 0 0"
+                            width="9.98"
+                            height="2"
+                            src="#brick"></a-box>
+        </a-entity>
+            <!-- left wall -->
+            <a-entity position="-8.99a 0 0" rotation="0 90 0">
+                <!-- top -->
+                <a-box
+                        position="0 3.98 4.5"
+                        rotation="0 0 0"
+                        width="9.98"
+                        height="2"
+                        src="#brick"   
+                ></a-box>
+                <!-- left -->
+                <a-box
+                    position="-3.74d 1.5 4.5"
+                    rotation="0 0 0"
+                    width="2.5"
+                    height="3"
+                    src="#brick"
+                ></a-box>
+                <!-- right -->
+                <a-box
+                        position="3.74 1.5 4.5"
+                        rotation="0 0 0"
+                        width="2.5"
+                        height="3"
+                        src="#brick">
+                </a-box>
+                <!-- Bottom -->
+                <a-box
+                        position="0 0 4.5"
+                        rotation="0 0 0"
+                        width="9.98"
+                        height="2"
+                        src="#brick">
+            </a-entity>
+                 <!--attic floor -->
+                 <a-box
+                position="0 4.5 0"
+                rotation="90 0 0"
+                width="9.5"
+                height="9.5"
+                src="#brick"
+                 ></a-box>
+            <!-- Door left -->
+            <a-box
+            scale="1 1 .1"
+            position="-2.24 1.5 3.34"
+            rotation="0 -45 0"
+            width="2"
+            height="3"
+            color="maroon"
+            ></a-box>
+            <!-- door right -->
+            <a-box 
+            scale="1 1 .1"
+            position="2.15 1.5 3.15"
+            rotation="0 -125 0"
+            width="2"
+            height="3"
+            color="maroon"
+            ></a-box>
+<!-- roof -->
+<a-entity>
+        <!--Left roof -->
+        <a-box
+                scale="1 1 .2"
+                position="-3 7 0"
+                rotation="45 90 0"
+                width="10"
+                height="8"
+                color="white"
+                src="#brick"
+        ></a-box>
+        <!-- right roof -->
+        <a-box
+                scale="1 1 .2"
+                position="3 7 0"
+                rotation="-45 90 0"
+                width="10"
+                height="8"
+                color="white"
+                src="#brick"
+        ></a-box>
+        <!--front roof-->
+         <a-entity> 
+                <a-triangle material="src: #brick;" map="repeat: 10 10;"
+                Side="double"
+                color="white" 
+                vertex-c="-5 5 5"
+                vertex-b="0 10 5" 
+                vertex-a="5 5 5">
+                </a-triangle>
+        </a-entity>
+       <!--back roof -->
+       <a-entity> 
+                <a-triangle material="src: #brick;" map="repeat: 10 10;"
+                Side="double"
+                color="white" 
+                vertex-c="-5 5 -5"
+                vertex-b="0 10 -5" 
+                vertex-a="5 5 -5">
+                </a-triangle>
+      </a-entity> 
+        <!-- foundation -->
+        <a-box 
+                position="0 -.5 0" 
+                rotation="-90 0 0" 
+                width="10" 
+                height="10" 
+                color="brown" 
+                src="#brick"
+                shadow> 
+        </a-box>
+
+</a-entity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+<a-entity rotation="0 90 0" position="-25 0 25.8s">
+        <!-- walkway -->
+        <a-box     
+        position="0 -0.501 10" 
+        width="3" 
+        height="20" 
+        rotation="90 0 0" 
+        shadow
+        src="#walk">
+ 
+  <!-- Your 3D Model 01 -->
+  <a-entity gltf-model="#pig" scale=".07 .07 .07" rotation="-90 180 180" position="0 -9 -.7"></a-entity>
+ 
+ 
+  <!-- Fireplace/ chimeny -->
+ <a-entity>
+ <!-- Chimeny -->
+ <a-box   
+         scale="1 1 3"
+         position="0 -15 0" 
+         width="2" 
+         height="20" 
+         rotation="90 0 0"
+         src="#brick">
+ </a-box>
+ <!-- Firebox -->
+ <a-box   
+         scale="1 1 1"
+         position="0 -14.1 -1.5" 
+         width="1.5" 
+         height="1.5" 
+         color="red"
+         rotation="180 0 0"
+         src="#fire">
+ </a-box>
+ </a-entity>
+ </a-box>
+         <!-- house -->
+         <a-entity>
+                 
+             <!-- Back wall -->
+             <a-box
+                 
+                 position="0 2.5 -4.5d"
+                 rotation="0 0 180"
+                 width="9.9"
+                 height="5"
+                 color="white"
+                 src="#straw"
+             ></a-box>
+             <!-- front wall -->
+         <a-entity>
+             <!-- top -->
+             <a-box
+                     position="0 4 4.5"
+                     rotation="0 0 0"
+                     width="8"
+                     height="2"
+                     color="white"
+                     src="#straw"
+             ></a-box>
+             <!-- left -->
+             <a-box
+                 position="-2.75 1.5 4.5"
+                 rotation="0 0 0"
+                 width="2.5"
+                 height="3"
+                 color="white"
+                 src="#straw"
+             ></a-box>
+             <!-- right -->
+             <a-box
+                 position="2.75 1.5 4.5"
+                 rotation="0 0 0"
+                 width="2.5"
+                 height="3"
+                 color="white"
+                 src="#straw"
+                 ></a-box>
+         </a-entity>
+         <!-- right wall -->
+         <a-entity position="-0.01 0 0" rotation="0 90 0">
+                 <!-- top -->
+                 <a-box
+                         position="0 3.98 4.5"
+                         rotation="0 0 0"
+                         width="9.98"
+                         height="2"
+                         color="white"
+                         src="#straw"
+                 ></a-box>
+                 <!-- left -->
+                 <a-box
+                     position="-3.74d 1.5 4.5"
+                     rotation="0 0 0"
+                     width="2.5"
+                     height="3"
+                     color="white"
+                     src="#straw"
+                 ></a-box>
+                 <!-- right -->
+                 <a-box
+                     position="3.74 1.5 4.5"
+                     rotation="0 0 0"
+                     width="2.5"
+                     height="3"
+                     color="white"
+                     src="#straw"
+                     ></a-box>
+                 <!-- Bottom -->
+                     <a-box
+                             position="0 0 4.5"
+                             rotation="0 0 0"
+                             width="9.98"
+                             height="2"
+                             color="white"
+                             src="#straw">
+         </a-entity>
+             <!-- left wall -->
+             <a-entity position="-8.99a 0 0" rotation="0 90 0">
+                 <!-- top -->
+                 <a-box
+                         position="0 3.98 4.5"
+                         rotation="0 0 0"
+                         width="9.98"
+                         height="2"
+                         color="white"
+                         src="#straw"
+                 ></a-box>
+                 <!-- left -->
+                 <a-box
+                     position="-3.74d 1.5 4.5"
+                     rotation="0 0 0"
+                     width="2.5"
+                     height="3"
+                     color="white"
+                     src="#straw"
+                 ></a-box>
+                 <!-- right -->
+                 <a-box
+                         position="3.74 1.5 4.5"
+                         rotation="0 0 0"
+                         width="2.5"
+                         height="3"
+                         color="white"
+                         src="#straw">
+                 </a-box>
+                 <!-- Bottom -->
+                 <a-box
+                         position="0 0 4.5"
+                         rotation="0 0 0"
+                         width="9.98"
+                         height="2"
+                         color="white"
+                         src="#straw">
+             </a-entity>
+                  <!--attic floor -->
+                  <a-box
+                 position="0 4.5 0"
+                 rotation="90 0 0"
+                 width="9.5"
+                 height="9.5"
+                 src="#straw"
+                  ></a-box>
+             <!-- Door left -->
+             <a-box
+             scale="1 1 .1"
+             position="-2.24 1.5 3.34"
+             rotation="0 -45 0"
+             width="2"
+             height="3"
+             color="maroon"
+             src="#straw"
+             ></a-box>
+             <!-- door right -->
+             <a-box 
+             scale="1 1 .1"
+             position="2.15 1.5 3.15"
+             rotation="0 -125 0"
+             width="2"
+             height="3"
+             color="maroon"
+             src="#straw"
+             ></a-box>
+ <!-- roof -->
+ <a-entity>
+         <!--Left roof -->
+         <a-box
+                 scale="1 1 .2"
+                 position="-3 7 0"
+                 rotation="45 90 0"
+                 width="10"
+                 height="8"
+                 color="white"
+                 src="#straw">
+         ></a-box>
+         <!-- right roof -->
+         <a-box
+                 scale="1 1 .2"
+                 position="3 7 0"
+                 rotation="-45 90 0"
+                 width="10"
+                 height="8"
+                 color="white"
+                 src="#straw">
+         ></a-box>
+         <!--front roof-->
+          <a-entity> 
+                 <a-triangle material="src: #straw;" map="repeat: 10 10;"
+                 Side="double"
+                 color="white" 
+                 vertex-c="-5 5 5"
+                 vertex-b="0 10 5" 
+                 vertex-a="5 5 5">
+                 </a-triangle>
+         </a-entity>
+        <!--back roof -->
+        <a-entity> 
+                 <a-triangle material="src: #straw;" map="repeat: 10 10;"
+                 Side="double"
+                 color="white" 
+                 vertex-c="-5 5 -5"
+                 vertex-b="0 10 -5" 
+                 vertex-a="5 5 -5">
+                 </a-triangle>
+       </a-entity> 
+         <!-- foundation -->
+         <a-box 
+                 position="0 -.5 0" 
+                 rotation="-90 0 0" 
+                 width="10" 
+                 height="10" 
+                 color="brown" 
+                 shadow
+                 src="#Straw"> 
+         </a-box>
+
+ 
+ </a-entity>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </a-entity id="box"  position="0 2 5" rotation="0 0 0" scale="1 1 1">
+
+       
+        <a-sky color="blue"></a-sky>
+
+
+<a-plane position="2 -1 7" scale="400 400 400"rotation="-90 0 0" side="doubled"
+color="green">
+
+</a-plane>
+
+
+</a-scene>
+</body>
+</html>
